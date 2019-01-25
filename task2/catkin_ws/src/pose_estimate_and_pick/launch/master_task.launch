@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+	<include file="$(find object_detection)/launch/task1_2.launch"></include>
+	<include file="$(find pose_estimate_and_pick)/launch/task2.launch"></include>
+	<include file="$(find sis_arm_planning)/launch/manipulation_tx2.launch"></include>
+</launch>

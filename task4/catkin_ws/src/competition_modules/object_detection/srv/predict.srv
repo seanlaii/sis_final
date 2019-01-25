@@ -1,0 +1,6 @@
+#Request data
+sensor_msgs/Image input_image
+int8 dataset_id #0: geometric object. 1: Products
+---
+#Response data
+sensor_msgs/Image output_mask

@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<launch>
+  <node pkg="place_to_box" type="place.py" name="place_node" output="screen"/>
+</launch>

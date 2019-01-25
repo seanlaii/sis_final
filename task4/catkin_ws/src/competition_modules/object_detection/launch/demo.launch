@@ -1,0 +1,10 @@
+<launch>
+  <include file="$(find realsense_camera)/launch/sr300_nodelet_rgbd.launch">
+  	<arg name="color_fps" value="10"/>
+  	<arg name="depth_fps" value="10"/>
+  </include>
+  <!-- rviz -->
+  <node pkg="rviz" type="rviz" name="rviz"/>
+  <node pkg="object_detection" type="object_detection_server.py" name="object_Object_detection_server" output="screen"/>
+  <node pkg="object_detection" type="object_detection_demo.py" name="object_Object_detection_demo" output="screen"/>
+</launch>

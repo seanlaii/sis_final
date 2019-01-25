@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<launch>
+  <node pkg="task1_1" type="task1_1_ros.py" name="task1_1" output="screen"/>
+</launch>

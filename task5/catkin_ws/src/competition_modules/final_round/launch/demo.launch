@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<launch>
+    <!-- Choose which kind of object do you want to pick -->
+    <arg name="obj_dataset"  default="2" />
+
+    <!-- Navigation -->
+    <include file="$(find sis_mobile)/launch/tag_detection.launch"/>
+    <include file="$(find robot_navigation)/launch/robot_navigation.launch" />
+    
+    <!-- Object detection -->
+    <!-- <include file="$(find object_detection)/launch/task1_1.launch" if="$(eval obj_dataset == '1')" /> -->
+
+    <include file="$(find object_detection)/launch/task1_2.launch" /> <!-- if="$(eval obj_dataset == '2')" /> -->
+    <!-- Pose estimate and pick -->
+    <include file="$(find pose_estimate_and_pick)/launch/task2.launch" />
+    <include file="$(find sis_arm_planning)/launch/manipulation_tx2.launch" />
+    <include file="$(find realsense_camera)/launch/sr300_nodelet_rgbd.launch">
+        <arg name="depth_fps" value="10"/>
+        <arg name="color_fps" value="10"/>    
+    </include>
+
+    <!-- Place to box -->
+    <include file="$(find place_to_box)/launch/place_to_box.launch" />
+    
+    <node pkg="final_round" type="test.py" name="test" output="screen"/>
+</launch>

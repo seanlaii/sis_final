@@ -1,0 +1,7 @@
+
+<launch>
+  <node pkg="object_detection" type="object_detection_server.py" name="object_Object_detection_server" output="screen"/>
+  <node pkg="pose_estimate_and_pick" type="pose_est_and_pick_server" name="pose_est_and_pick_server" output="screen"/>
+  <node pkg="pose_estimate_and_pick" type="pose_est_and_pick_demo.py" name="pose_est_and_pick_demo" output="screen"/>
+
+</launch>

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+  <node pkg="pose_estimate_and_pick" type="demo" name="task2" output="screen"/>
+  <node pkg="pose_estimate_and_pick" type="client.py" name="client" output="screen"/>
+  <node pkg="pose_estimate_and_pick" type="pick.py" name="pick" output="screen"/>
+</launch>

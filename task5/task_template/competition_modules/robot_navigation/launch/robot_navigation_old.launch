@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+
+  <node name="robot_navigate_node_1" pkg="robot_navigation" type="robot_navigate_node_1.py" output="screen"/>
+  <node name="demo" pkg="robot_navigation" type="demo.py" output="screen"/>
+</launch>

@@ -1,0 +1,7 @@
+#Request data
+sensor_msgs/Image mask
+sensor_msgs/PointCloud2 pc
+int8 dataset_id #0: geometric object. 1: Products
+---
+#Response data
+int8 apriltag_id #The target apriltag

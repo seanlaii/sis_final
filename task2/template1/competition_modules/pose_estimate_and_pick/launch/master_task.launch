@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<launch>
+	<include file="$(find object_detection)/launch/task1_2.launch"></include>
+	<include file="$(find pose_estimate_and_pick)/launch/task2.launch"></include>
+	<include file="$(find sis_arm_planning)/launch/manipulation_tx2.launch"></include>
+	<include file="$(find realsense_camera)/launch/sr300_nodelet_rgbd.launch">
+		<arg name="depth_fps" value=10/>
+		<arg name="color_fps" value=10/>
+	</include>
+</launch>
